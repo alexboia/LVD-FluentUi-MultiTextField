@@ -2,15 +2,27 @@
 	"name": "lvd-fluentui-multitextfield",
 	"version": "0.0.1",
 	"description": "A ReactJS component that allows for multiple text field input, built using the FluentUI library",
-	"homepage": "",
+	"homepage": "https://github.com/alexboia/LVD-FluentUi-MultiTextField",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/alexboia/LVD-FluentUi-MultiTextField.git"
 	},
 	"bugs": {
-		"url": ""
+		"url": "https://github.com/alexboia/LVD-FluentUi-MultiTextField/issues"
 	},
 	"main": "dist/index.umd2.js",
+	"types": "dist/index.d.ts",
+	"typings": "dist/index.d.ts",
+	"keywords": [
+		"react",
+		"reactjs",
+		"reactjs-components",
+		"ui-components",
+		"text-input",
+		"multiple-text-input",
+		"fluent-ui",
+		"fluent-ui-components"
+	],
 	"scripts": {
 		"build-app": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-app.ps1",
 		"build-dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-dist.ps1",

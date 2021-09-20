@@ -67,7 +67,7 @@ You can either directly include the `dist/style.css` into your `html` web page o
 @import '~lvd-fluentui-multitextfield/dist/style.css';
 ```
 
-Also see [the component itself]().
+Also see [the component itself](https://github.com/alexboia/LVD-FluentUi-MultiTextField/blob/main/src/components/MultiTextField.jsx).
 
 
 ## Building

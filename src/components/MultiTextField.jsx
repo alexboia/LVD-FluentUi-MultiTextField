@@ -105,12 +105,31 @@ class MultiTextField extends React.Component {
 
 	render() {
 		return (
-			<div className="lvd-multitextfied-input-container">
+			<div className={this._getContainerCssClassName()} style={this._getContainerStyle()}>
 				{this._renderLabel()}
 				{this._renderInputList()}
 			</div>
 		);
 	};
+
+	_getContainerCssClassName() {
+		const containerCssClass = ['lvd-multitextfied-input-container'];
+
+		const className = this._getClassName();
+		if (!!className) {
+			containerCssClass.push(className);
+		}
+
+		return containerCssClass.join(' ');
+	}
+
+	_getClassName() {
+		return this.props.className || null;
+	}
+
+	_getContainerStyle() {
+		return this.props.style || {};
+	}
 
 	_renderLabel() {
 		const label = this._getLabel();

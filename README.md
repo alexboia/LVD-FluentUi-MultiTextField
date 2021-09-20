@@ -92,12 +92,30 @@ npm run build
 
 | What | Prop Name | Type | Notes |
 | --- | --- | --- | --- |
+| Set additional master container css class name | `className` | `string` | Defaults to `null`. |
+| Set additional master inline css style properties | `style` | `object` | Key-value plain javascript object. Defaults to `{}`. |
+| Set input label | `label` | `string` | Defaults to empty string. |
+| Configure all input items | `inputProps` | `Input Items Configuration Object` | See below. |
+| Configure the add input item action | `addInputItemActionProps` | `Add Input Action Configuration Object` | See below. |
+| Configure the remove input item action | `removeInputItemActionProps` | `Remove Input Action Configuration Object` | See below. |
+| Set minimum input item count | `minItemCount` | `Number` | Defaults to `1`. |
+| Set maximum input item count | `maxItemCount` | `Number` | Defaults to `Number.MAX_SAFE_INTEGER`. |
+| Set initial input item count | `initialItemCount` | `Number` | Defaults to `1`. Must be within specified minimum and maximum input item counts. |
+| Set values | `values` | `string[]` | Defaults to an array of empty string values with the length equal to the specified initial item count. |
+| Configure specific input item | `onGetInputProps` | (`itemValue`:`string`, `itemIndex`:`number`) => `Input Items Configuration Object` | See below. |
+| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`) => `string` | See below. |
+| Get default value for specific input item | `onGetDefaultInputItemValue` | (`itemIndex`:`number`) => `string` | See below. |
 
 ## Events
 <a name="c-events"></a>
 
 | Event | Prop Name | Arguments | Notes |
 | --- | --- | --- | --- |
+| Value added at index | `onInputItemAdded` | (`newValue`:`string`, `itemIndex`:`number`) | - |
+| Value removed at index | `onInputItemRemoved` | (`removedValue`:`string`, `itemIndex`:`number`) | - |
+| Input item focused | `onInputItemFocus` | (`itemIndex`:`number`) | Triggered when one of the underlying `TextField`s gains focus. |
+| Input item lost focus | `onInputItemBlur` | (`itemIndex`:`number`) | Triggered when one of the underlying `TextField`s loses focus. |
+| Value changed | `onChange` | (`values`:`string[]`,) | Triggered when: a new input item is added, an existing input item is removed or the value of an existing input item is changed. |
 
 ## Changelog
 <a name="c-changelog"></a>
@@ -111,3 +129,5 @@ npm run build
 
 I put some of my free time into developing and maintaining this plugin.
 If helped you in your projects and you are happy with it, you can...
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q01KGLM)

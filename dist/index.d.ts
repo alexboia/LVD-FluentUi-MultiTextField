@@ -54,7 +54,7 @@ export interface IMultiTextFieldProps {
 	onInputItemFocus?: (itemIndex: number) => void;
 	onInputItemBlur?: (itemIndex: number) => void;
 	
-	onChange?: (values:string[]) => void;
+	onChange?: (values: string[]) => void;
 }
 
 export declare class MultiTextField extends React.Component<IMultiTextFieldProps, {}> {

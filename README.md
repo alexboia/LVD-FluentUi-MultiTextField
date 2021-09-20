@@ -3,7 +3,7 @@
 A multiple text field input component, built using the [FluentUI library](https://github.com/microsoft/fluentui), with the following features:
 - specify optional minimum, maximum and initial value count;
 - controls for adding and removing input items;
-- fine-grained control over input item configuration.
+- fine-grained control over input item configuration, including appearance and error message handling.
 
 <p align="left">
 	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-MultiTextField/main/docs/Capture.png" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />

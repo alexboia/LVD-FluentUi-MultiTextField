@@ -19339,7 +19339,7 @@ template {
 	display: block;
 	overflow: hidden;
 	min-width: 210px;
-	height: 40px;
+	min-height: 40px;
 }
 
 .lvd-multitextfield-input-container {

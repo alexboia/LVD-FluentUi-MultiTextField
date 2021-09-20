@@ -26,6 +26,10 @@ export default class App extends React.Component {
 		return (
 			<div className="lvd-multitextfield-demo-container">
 				<MultiTextField  
+					inputProps={{
+						required: true,
+						underlined: true
+					}}
 					values={this.state.values}
 					minItemCount={3}
 					initialItemCount={4}

@@ -145,7 +145,7 @@ class MultiTextField extends React.Component {
 	_getInputItemErrorMessage(itemValue, itemIndex) {
 		return this.props.onGetInputItemErrorMessage != null
 			? this.props.onGetInputItemErrorMessage(itemValue, itemIndex)
-			: '';
+			: undefined;
 	}
 
 	_handleInputItemFocused(itemEvent, itemIndex) {
@@ -266,7 +266,7 @@ class MultiTextField extends React.Component {
 	}
 
 	_getBasicInputProps() {
-		return this.props.inputItemProps || {};
+		return this.props.inputProps || {};
 	}
 
 	_getCustomInputProps(itemValue, itemIndex) {

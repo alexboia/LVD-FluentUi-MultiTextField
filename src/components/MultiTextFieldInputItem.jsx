@@ -44,13 +44,19 @@ export default class MultiTextFieldInputItem extends React.Component {
 	}
 
 	_getInputErrorMessage(value) {
+		let errorMessage = null;
+
 		if (this.props.onGetErrorMessage != null) {
-			return this.props.onGetErrorMessage(value);
-		} else {
-			return this._isRequired() 
+			errorMessage = this.props.onGetErrorMessage(value);
+		} 
+
+		if (errorMessage === undefined && !value) {
+			errorMessage = this._isRequired()
 				? MultiTextFieldDefaults.inputItem.messages.empty 
 				: '';
 		}
+
+		return errorMessage;
 	}
 
 	_isRequired() {

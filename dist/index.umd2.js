@@ -160,8 +160,32 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("div", {
-        className: "lvd-multitextfied-input-container"
+        className: this._getContainerCssClassName(),
+        style: this._getContainerStyle()
       }, this._renderLabel(), this._renderInputList());
+    }
+  }, {
+    key: "_getContainerCssClassName",
+    value: function _getContainerCssClassName() {
+      var containerCssClass = ['lvd-multitextfied-input-container'];
+
+      var className = this._getClassName();
+
+      if (!!className) {
+        containerCssClass.push(className);
+      }
+
+      return containerCssClass.join(' ');
+    }
+  }, {
+    key: "_getClassName",
+    value: function _getClassName() {
+      return this.props.className || null;
+    }
+  }, {
+    key: "_getContainerStyle",
+    value: function _getContainerStyle() {
+      return this.props.style || {};
     }
   }, {
     key: "_renderLabel",
@@ -178,7 +202,7 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
   }, {
     key: "_getInputItemErrorMessage",
     value: function _getInputItemErrorMessage(itemValue, itemIndex) {
-      return this.props.onGetInputItemErrorMessage != null ? this.props.onGetInputItemErrorMessage(itemValue, itemIndex) : '';
+      return this.props.onGetInputItemErrorMessage != null ? this.props.onGetInputItemErrorMessage(itemValue, itemIndex) : undefined;
     }
   }, {
     key: "_handleInputItemFocused",
@@ -325,7 +349,7 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
   }, {
     key: "_getBasicInputProps",
     value: function _getBasicInputProps() {
-      return this.props.inputItemProps || {};
+      return this.props.inputProps || {};
     }
   }, {
     key: "_getCustomInputProps",
@@ -825,11 +849,17 @@ var MultiTextFieldInputItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "_getInputErrorMessage",
     value: function _getInputErrorMessage(value) {
+      var errorMessage = null;
+
       if (this.props.onGetErrorMessage != null) {
-        return this.props.onGetErrorMessage(value);
-      } else {
-        return this._isRequired() ? _MultiTextFieldDefaults__WEBPACK_IMPORTED_MODULE_10__["default"].inputItem.messages.empty : '';
+        errorMessage = this.props.onGetErrorMessage(value);
       }
+
+      if (errorMessage === undefined && !value) {
+        errorMessage = this._isRequired() ? _MultiTextFieldDefaults__WEBPACK_IMPORTED_MODULE_10__["default"].inputItem.messages.empty : '';
+      }
+
+      return errorMessage;
     }
   }, {
     key: "_isRequired",

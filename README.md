@@ -115,7 +115,7 @@ npm run build
 | Value removed at index | `onInputItemRemoved` | (`removedValue`:`string`, `itemIndex`:`number`) | - |
 | Input item focused | `onInputItemFocus` | (`itemIndex`:`number`) | Triggered when one of the underlying `TextField`s gains focus. |
 | Input item lost focus | `onInputItemBlur` | (`itemIndex`:`number`) | Triggered when one of the underlying `TextField`s loses focus. |
-| Value changed | `onChange` | (`values`:`string[]`,) | Triggered when: a new input item is added, an existing input item is removed or the value of an existing input item is changed. |
+| Value changed | `onChange` | (`values`:`string[]`) | Triggered when: a new input item is added, an existing input item is removed or the value of an existing input item is changed. |
 
 ## Changelog
 <a name="c-changelog"></a>

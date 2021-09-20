@@ -102,9 +102,9 @@ npm run build
 | Set maximum input item count | `maxItemCount` | `Number` | Defaults to `Number.MAX_SAFE_INTEGER`. |
 | Set initial input item count | `initialItemCount` | `Number` | Defaults to `1`. Must be within specified minimum and maximum input item counts. |
 | Set values | `values` | `string[]` | Defaults to an array of empty string values with the length equal to the specified initial item count. |
-| Configure specific input item | `onGetInputProps` | (`itemValue`:`string`, `itemIndex`:`number`) => `Input Items Configuration Object` | See below. |
-| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`) => `string` | Return empty string if no error. By default, if the input item is required, but no error message is provided, the `You must fill in a value` message id displayed. |
-| Get default value for specific input item | `onGetDefaultInputItemValue` | (`itemIndex`:`number`) => `string` | Default value defaults to an empty string. |
+| Configure specific input item | `onGetInputProps` | (`itemValue`:`string`, `itemIndex`:`number`): `Input Items Configuration Object` | See below. |
+| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`): `string` | Return empty string if no error. By default, if the input item is required, but no error message is provided, the `You must fill in a value` message id displayed. |
+| Get default value for specific input item | `onGetDefaultInputItemValue` | (`itemIndex`:`number`): `string` | Default value defaults to an empty string. |
 
 ### Input Items Configuration Object
 

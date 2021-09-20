@@ -123,6 +123,20 @@ A plain javascript object with the following properties:
 | `disabled` | `boolean` | Whether or not to disable the actual input element. Defaults to `false`. |
 | `borderless` | `boolean` | Whether or not to make the actual input element borderless. Defaults to `false`. |
 
+### Add Input Action Configuration Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+
+### Remove Input Action Configuration Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+
 ## Events
 <a name="c-events"></a>
 

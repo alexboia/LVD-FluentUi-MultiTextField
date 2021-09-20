@@ -193,28 +193,31 @@ class MultiTextField extends React.Component {
 		console.log(values);
 		return (
 			<React.Fragment>
-				{values.map((initialItemValue, itemIndex) => {
-					return (
-						<MultiTextFieldInputItem 
-							{...this._getTextFieldItemProps(initialItemValue, itemIndex)}
-							key={itemIndex} 
-							onChange={(itemEvent) => this._handleInputItemChanged(itemEvent, itemIndex)}
-							onGetErrorMessage={(itemValue) => this._getInputItemErrorMessage(itemValue, itemIndex)}
-
-							onAddRequested={(itemEvent) => this._handleAddInputItemRequested(itemEvent, itemIndex)}
-							onRemoveRequested={(itemEvent) => this._handleRemoveItemRequested(itemEvent, itemIndex)}
-
-							onFocus={(itemEvent) => this._handleInputItemFocused(itemEvent, itemIndex)}
-							onBlur={(itemEvent) => this._handleInputItemBlured(itemEvent, itemIndex)}
-						/>
-					);
-				})}
+				{values.map((itemValue, itemIndex) => this._renderInputItem(itemValue, itemIndex))}
 			</React.Fragment>
 		);
 	}
 
 	_getValues() {
 		return this.props.values;
+	}
+
+	_renderInputItem(itemValue, itemIndex) {
+		return (
+			<MultiTextFieldInputItem 
+				{...this._getTextFieldItemProps(itemValue, itemIndex)}
+
+				key={itemIndex} 
+				onChange={(itemEvent) => this._handleInputItemChanged(itemEvent, itemIndex)}
+				onGetErrorMessage={(itemValue) => this._getInputItemErrorMessage(itemValue, itemIndex)}
+
+				onAddRequested={(itemEvent) => this._handleAddInputItemRequested(itemEvent, itemIndex)}
+				onRemoveRequested={(itemEvent) => this._handleRemoveItemRequested(itemEvent, itemIndex)}
+
+				onFocus={(itemEvent) => this._handleInputItemFocused(itemEvent, itemIndex)}
+				onBlur={(itemEvent) => this._handleInputItemBlured(itemEvent, itemIndex)}
+			/>
+		);
 	}
 
 	_getTextFieldItemProps(itemValue, itemIndex) {

@@ -5138,34 +5138,41 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
       var values = this._getValues();
 
       console.log(values);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null, values.map(function (initialItemValue, itemIndex) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_MultiTextFieldInputItem_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _this._getTextFieldItemProps(initialItemValue, itemIndex), {
-          key: itemIndex,
-          onChange: function onChange(itemEvent) {
-            return _this._handleInputItemChanged(itemEvent, itemIndex);
-          },
-          onGetErrorMessage: function onGetErrorMessage(itemValue) {
-            return _this._getInputItemErrorMessage(itemValue, itemIndex);
-          },
-          onAddRequested: function onAddRequested(itemEvent) {
-            return _this._handleAddInputItemRequested(itemEvent, itemIndex);
-          },
-          onRemoveRequested: function onRemoveRequested(itemEvent) {
-            return _this._handleRemoveItemRequested(itemEvent, itemIndex);
-          },
-          onFocus: function onFocus(itemEvent) {
-            return _this._handleInputItemFocused(itemEvent, itemIndex);
-          },
-          onBlur: function onBlur(itemEvent) {
-            return _this._handleInputItemBlured(itemEvent, itemIndex);
-          }
-        }));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null, values.map(function (itemValue, itemIndex) {
+        return _this._renderInputItem(itemValue, itemIndex);
       }));
     }
   }, {
     key: "_getValues",
     value: function _getValues() {
       return this.props.values;
+    }
+  }, {
+    key: "_renderInputItem",
+    value: function _renderInputItem(itemValue, itemIndex) {
+      var _this2 = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_MultiTextFieldInputItem_jsx__WEBPACK_IMPORTED_MODULE_10__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this._getTextFieldItemProps(itemValue, itemIndex), {
+        key: itemIndex,
+        onChange: function onChange(itemEvent) {
+          return _this2._handleInputItemChanged(itemEvent, itemIndex);
+        },
+        onGetErrorMessage: function onGetErrorMessage(itemValue) {
+          return _this2._getInputItemErrorMessage(itemValue, itemIndex);
+        },
+        onAddRequested: function onAddRequested(itemEvent) {
+          return _this2._handleAddInputItemRequested(itemEvent, itemIndex);
+        },
+        onRemoveRequested: function onRemoveRequested(itemEvent) {
+          return _this2._handleRemoveItemRequested(itemEvent, itemIndex);
+        },
+        onFocus: function onFocus(itemEvent) {
+          return _this2._handleInputItemFocused(itemEvent, itemIndex);
+        },
+        onBlur: function onBlur(itemEvent) {
+          return _this2._handleInputItemBlured(itemEvent, itemIndex);
+        }
+      }));
     }
   }, {
     key: "_getTextFieldItemProps",

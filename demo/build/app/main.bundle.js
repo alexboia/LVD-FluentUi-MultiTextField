@@ -4806,6 +4806,19 @@ var App = /*#__PURE__*/function (_React$Component) {
           required: true,
           underlined: true
         },
+        onGetInputProps: function onGetInputProps(itemValue, itemIndex) {
+          return {
+            required: itemIndex % 2 == 0,
+            underlined: itemIndex % 2 == 1
+          };
+        },
+        onGetInputItemErrorMessage: function onGetInputItemErrorMessage(itemValue, itemIndex) {
+          if (!itemValue) {
+            return itemIndex % 2 == 0 ? 'Please fill in this' : 'Please fill in that';
+          } else {
+            return '';
+          }
+        },
         values: this.state.values,
         minItemCount: 3,
         initialItemCount: 4,
@@ -5498,7 +5511,7 @@ var MultiTextFieldInputItem = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null, addActionProps.allowAdd && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_11__.ActionButton, {
         iconProps: addActionProps.iconProps,
-        label: addActionProps,
+        label: addActionProps.label,
         onClick: this._handleAddActionButtonClicked
       }), removeActionProps.allowRemove && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_11__.ActionButton, {
         iconProps: removeActionProps.iconProps,

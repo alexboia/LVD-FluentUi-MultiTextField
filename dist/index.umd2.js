@@ -946,7 +946,7 @@ var MultiTextFieldInputItem = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement((react__WEBPACK_IMPORTED_MODULE_7___default().Fragment), null, addActionProps.allowAdd && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_9__.ActionButton, {
         iconProps: addActionProps.iconProps,
-        label: addActionProps,
+        label: addActionProps.label,
         onClick: this._handleAddActionButtonClicked
       }), removeActionProps.allowRemove && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_9__.ActionButton, {
         iconProps: removeActionProps.iconProps,

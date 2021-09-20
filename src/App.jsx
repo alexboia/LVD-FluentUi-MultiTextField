@@ -30,6 +30,21 @@ export default class App extends React.Component {
 						required: true,
 						underlined: true
 					}}
+					onGetInputProps={(itemValue, itemIndex) => {
+						return {
+							required: itemIndex % 2 == 0,
+							underlined: itemIndex % 2 == 1
+						};
+					}}
+					onGetInputItemErrorMessage={(itemValue, itemIndex) => {
+						if (!itemValue) {
+							return itemIndex % 2 == 0
+								? 'Please fill in this'
+								: 'Please fill in that';
+						} else {
+							return '';
+						}
+					}}
 					values={this.state.values}
 					minItemCount={3}
 					initialItemCount={4}

@@ -143,7 +143,7 @@ export default class MultiTextFieldInputItem extends React.Component {
 				{addActionProps.allowAdd && (
 					<ActionButton 
 						iconProps={addActionProps.iconProps}
-						label={addActionProps}
+						label={addActionProps.label}
 						onClick={this._handleAddActionButtonClicked}
 					/>
 				)}

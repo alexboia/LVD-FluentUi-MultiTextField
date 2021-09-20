@@ -1,11 +1,19 @@
 # LVD-FluentUi-MultiTextField
 
-A ReactJS component that allows for multiple text field input, built using the FluentUI library
+A multiple text field input component, built using the [FluentUI library](https://github.com/microsoft/fluentui), with the following features:
+- specify optional minimum, maximum and initial value count;
+- controls for adding and removing input items;
+- fine-grained control over input item configuration.
 
 ## Installation
 <a name="c-installation"></a>
 
 `npm install --save lvd-fluentui-multitextfield`
+
+## Demo
+<a name="c-demo"></a>
+
+The `demo` directory contains [a compiled and ready-to-run example](https://github.com/alexboia/LVD-FluentUi-MultiTextField/tree/main/demo). Just open up the `index.html` file.
 
 ## Basic Usage
 <a name="c-basic-usage"></a>
@@ -17,19 +25,34 @@ import { MultiTextField } from 'lvd-fluentui-multitextfield';
 class MultiTextFieldSamplePage extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			values: []
+		};
+
+		this._handleValuesChanged = 
+			this._handleValuesChanged.bind(this);
+	}
+
+	_handleValuesChanged(values) {
+		// Do something with the values
+		this.setState({
+			values: values
+		});
 	}
 
 	render() {
 		return (
 			<MultiTextField 
-
+				values={this.state.values}
+				onChange={this._handleValuesChanged}
 			/>
 		);
 	}
 }
 ```
 
-You can find a full working example [here]().
+You can find a full working example [here](https://github.com/alexboia/LVD-FluentUi-MultiTextField/blob/main/src/App.jsx).
 
 ## Styling
 <a name="c-styling"></a>

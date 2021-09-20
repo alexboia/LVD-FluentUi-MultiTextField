@@ -103,8 +103,25 @@ npm run build
 | Set initial input item count | `initialItemCount` | `Number` | Defaults to `1`. Must be within specified minimum and maximum input item counts. |
 | Set values | `values` | `string[]` | Defaults to an array of empty string values with the length equal to the specified initial item count. |
 | Configure specific input item | `onGetInputProps` | (`itemValue`:`string`, `itemIndex`:`number`) => `Input Items Configuration Object` | See below. |
-| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`) => `string` | Return empty string if no error. |
+| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`) => `string` | Return empty string if no error. By default, if the input item is required, but no error message is provided, the `You must fill in a value` message id displayed. |
 | Get default value for specific input item | `onGetDefaultInputItemValue` | (`itemIndex`:`number`) => `string` | Default value defaults to an empty string. |
+
+### Input Items Configuration Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `className` | `string` | CSS class name for the actual input element. Defaults to `null`. |
+| `style` | `object` | Additional inline css style properties for the actual input element. Defaults to `{}`. |
+| `label` | `string` | Individual label for the input item. Defaults to `null`. |
+| `placeholder` | `string` | Individual placeholder for the actual input element. Defaults to `Please enter a value`. |
+| `description` | `string` | Individual description for the actual input element. Defaults to `null`. |
+| `required` | `boolean` | Whether the actual input element is required or not. Defaults to `false`. |
+| `underlined` | `boolean` | Whether or not to display the actual input element in underlined style. Defaults to `false`. |
+| `readOnly` | `boolean` | Whether or not to make the actual input element read-only. Defaults to `false`. |
+| `disabled` | `boolean` | Whether or not to disable the actual input element. Defaults to `false`. |
+| `borderless` | `boolean` | Whether or not to make the actual input element borderless. Defaults to `false`. |
 
 ## Events
 <a name="c-events"></a>

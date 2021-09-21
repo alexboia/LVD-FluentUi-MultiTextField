@@ -85,7 +85,6 @@ export default class MultiTextFieldInputItem extends React.Component {
 				<div className="lvd-multitextfield-ctrl-container">
 					{this._renderControls()}
 				</div>
-				<div className="lvd-multitextfield-clear"></div>
 			</div>
 		);
 	}
@@ -143,14 +142,14 @@ export default class MultiTextFieldInputItem extends React.Component {
 				{addActionProps.allowAdd && (
 					<ActionButton 
 						iconProps={addActionProps.iconProps}
-						label={addActionProps.label}
+						text={addActionProps.label}
 						onClick={this._handleAddActionButtonClicked}
 					/>
 				)}
 				{removeActionProps.allowRemove && (
 					<ActionButton 
 						iconProps={removeActionProps.iconProps}
-						label={removeActionProps.label}
+						text={removeActionProps.label}
 						onClick={this._handleRemoveActionButtonClicked}
 					/>
 				)}

@@ -113,7 +113,7 @@ npm run build
 | Set initial input item count | `initialItemCount` | `Number` | Defaults to `1`. Must be within specified minimum and maximum input item counts. |
 | Set values | `values` | `string[]` | Defaults to an array of empty string values with the length equal to the specified initial item count. |
 | Configure specific input item | `onGetInputProps` | (`itemValue`:`string`, `itemIndex`:`number`): `Input Items Configuration Object` | See below. |
-| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`): `string` | Return empty string if no error. By default, if the input item is required, but no error message is provided, the `You must fill in a value` message id displayed. |
+| Get error message for specific input item | `onGetInputItemErrorMessage` | (`itemValue`:`string`, `itemIndex`:`number`): `string` | Return empty string if no error. By default, if the input item is required, but no error message is provided, the `You must fill in a value` message is displayed. |
 | Get default value for specific input item | `onGetDefaultInputItemValue` | (`itemIndex`:`number`): `string` | Default value defaults to an empty string. |
 
 ### Input Items Configuration Object
@@ -139,6 +139,10 @@ A plain javascript object with the following properties:
 
 | Name | Type | Notes |
 | --- | --- | --- |
+| `allowAdd` | `string` | Whether or not to allow adding new input items. Automatically overridden to false if a maximum input item count is set and the current input item count reaches that limit. |
+| `iconProps` | `IIconProps` | Icon properties. See [here](https://developer.microsoft.com/en-us/fluentui#/controls/web/icon#IIconProps). |
+| `label` | `string` | Button label. Defaults to `null`. |
+| `className` | `string` | Additional button CSS class name |
 
 ### Remove Input Action Configuration Object
 
@@ -146,6 +150,10 @@ A plain javascript object with the following properties:
 
 | Name | Type | Notes |
 | --- | --- | --- |
+| `allowRemove` | `string` | Whether or not to allow adding new input items. Automatically overridden to false if the number of input items reaches the minimum input item count. |
+| `iconProps` | `IIconProps` | Icon properties. See [here](https://developer.microsoft.com/en-us/fluentui#/controls/web/icon#IIconProps). |
+| `label` | `string` | Button label. Defaults to `null`. |
+| `className` | `string` | Additional button CSS class name |
 
 ## Events
 <a name="c-events"></a>

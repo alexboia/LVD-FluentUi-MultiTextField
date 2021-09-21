@@ -1,15 +1,21 @@
 .lvd-multitextfield-item {
 	width: 100%;
-	display: block;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items:  center;
 	overflow: hidden;
 	min-width: 210px;
 	min-height: 40px;
 }
 
 .lvd-multitextfield-input-container {
-	float: left;
-	width: calc(100% - 100px);
 	min-width: 100px;
+	order: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
 }
 
 .lvd-multitextfield-input-container .ms-TextField-errorMessage {
@@ -17,7 +23,8 @@
 }
 
 .lvd-multitextfield-ctrl-container {
-	float: right;
+	width: auto;
+	order: 2;
 }
 
 .lvd-multitextfield-clear {

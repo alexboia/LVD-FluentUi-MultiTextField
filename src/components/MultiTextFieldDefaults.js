@@ -16,12 +16,12 @@ const MultiTextFieldDefaults = {
 	},
 
 	addInputItemAction: {
-		label: 'Add',
+		label: null,
 		iconName: 'Add'
 	},
 
 	removeInputItemAction: {
-		label: 'Remove',
+		label: null,
 		iconName: 'RemoveFilter'
 	}
 };

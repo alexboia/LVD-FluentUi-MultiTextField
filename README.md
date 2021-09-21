@@ -9,6 +9,8 @@ A multiple text field input component, built using the [FluentUI library](https:
 	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-MultiTextField/main/docs/Capture.png" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />
 </p>
 
+Also an animated demo which is configured for a minmum of 3 input items, a maximum of 10 and an initial count of 4.
+
 <p align="left">
 	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-MultiTextField/main/docs/AnimationMultiTextField.gif" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />
 </p>

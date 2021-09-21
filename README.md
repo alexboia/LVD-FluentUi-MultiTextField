@@ -1,5 +1,7 @@
 # LVD-FluentUi-MultiTextField
 
+[![NPM](https://nodei.co/npm/lvd-fluentui-multitextfield.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/lvd-fluentui-multitextfield/)
+
 A multiple text field input component, built using the [FluentUI library](https://github.com/microsoft/fluentui), with the following features:
 - specify optional minimum, maximum and initial value count;
 - controls for adding and removing input items;

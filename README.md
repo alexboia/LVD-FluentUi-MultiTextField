@@ -9,6 +9,10 @@ A multiple text field input component, built using the [FluentUI library](https:
 	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-MultiTextField/main/docs/Capture.png" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />
 </p>
 
+<p align="left">
+	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-MultiTextField/main/docs/AnimationMultiTextField.gif" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />
+</p>
+
 ## Installation
 <a name="c-installation"></a>
 

@@ -755,11 +755,11 @@ var MultiTextFieldDefaults = {
     }
   },
   addInputItemAction: {
-    label: 'Add',
+    label: null,
     iconName: 'Add'
   },
   removeInputItemAction: {
-    label: 'Remove',
+    label: null,
     iconName: 'RemoveFilter'
   }
 };
@@ -891,9 +891,7 @@ var MultiTextFieldInputItem = /*#__PURE__*/function (_React$Component) {
         className: "lvd-multitextfield-input-container"
       }, this._renderInputField()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("div", {
         className: "lvd-multitextfield-ctrl-container"
-      }, this._renderControls()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("div", {
-        className: "lvd-multitextfield-clear"
-      }));
+      }, this._renderControls()));
     }
   }, {
     key: "_renderInputField",
@@ -946,11 +944,11 @@ var MultiTextFieldInputItem = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement((react__WEBPACK_IMPORTED_MODULE_7___default().Fragment), null, addActionProps.allowAdd && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_9__.ActionButton, {
         iconProps: addActionProps.iconProps,
-        label: addActionProps.label,
+        text: addActionProps.label,
         onClick: this._handleAddActionButtonClicked
       }), removeActionProps.allowRemove && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_9__.ActionButton, {
         iconProps: removeActionProps.iconProps,
-        label: removeActionProps.label,
+        text: removeActionProps.label,
         onClick: this._handleRemoveActionButtonClicked
       }));
     }

@@ -167,7 +167,7 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
   }, {
     key: "_getContainerCssClassName",
     value: function _getContainerCssClassName() {
-      var containerCssClass = ['lvd-multitextfied-input-container'];
+      var containerCssClass = ['lvd-multitextfied-container'];
 
       var className = this._getClassName();
 
@@ -192,7 +192,9 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
     value: function _renderLabel() {
       var label = this._getLabel();
 
-      return !!label ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_9__.Label, null, label) : null;
+      return !!label ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_9__.Label, {
+        className: "lvd-multitextfield-label"
+      }, label) : null;
     }
   }, {
     key: "_getLabel",

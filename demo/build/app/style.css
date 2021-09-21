@@ -19334,6 +19334,10 @@ template {
   font-family: 'Selawik Web', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
+.lvd-multitextfied-container .lvd-multitextfield-label {
+	padding-bottom: 8px;
+}
+
 .lvd-multitextfield-item {
 	width: 100%;
 	display: flex;

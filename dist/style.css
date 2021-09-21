@@ -1,3 +1,7 @@
+.lvd-multitextfied-container .lvd-multitextfield-label {
+	padding-bottom: 8px;
+}
+
 .lvd-multitextfield-item {
 	width: 100%;
 	display: flex;

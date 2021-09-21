@@ -4802,6 +4802,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
         className: "lvd-multitextfield-demo-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(_components_MultiTextField_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        label: "Society codes:",
         inputProps: {
           required: true,
           underlined: true
@@ -5060,7 +5061,7 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
   }, {
     key: "_getContainerCssClassName",
     value: function _getContainerCssClassName() {
-      var containerCssClass = ['lvd-multitextfied-input-container'];
+      var containerCssClass = ['lvd-multitextfied-container'];
 
       var className = this._getClassName();
 
@@ -5085,7 +5086,9 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
     value: function _renderLabel() {
       var label = this._getLabel();
 
-      return !!label ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_11__.Label, null, label) : null;
+      return !!label ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_11__.Label, {
+        className: "lvd-multitextfield-label"
+      }, label) : null;
     }
   }, {
     key: "_getLabel",

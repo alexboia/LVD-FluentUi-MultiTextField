@@ -113,7 +113,7 @@ class MultiTextField extends React.Component {
 	};
 
 	_getContainerCssClassName() {
-		const containerCssClass = ['lvd-multitextfied-input-container'];
+		const containerCssClass = ['lvd-multitextfied-container'];
 
 		const className = this._getClassName();
 		if (!!className) {
@@ -134,7 +134,7 @@ class MultiTextField extends React.Component {
 	_renderLabel() {
 		const label = this._getLabel();
 		return !!label 
-			? (<Label>{label}</Label>) 
+			? (<Label className="lvd-multitextfield-label">{label}</Label>) 
 			: null;
 	}
 

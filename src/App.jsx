@@ -26,6 +26,7 @@ export default class App extends React.Component {
 		return (
 			<div className="lvd-multitextfield-demo-container">
 				<MultiTextField  
+					label="Society codes:"
 					inputProps={{
 						required: true,
 						underlined: true

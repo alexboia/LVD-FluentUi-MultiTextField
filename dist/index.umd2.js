@@ -287,7 +287,6 @@ var MultiTextField = /*#__PURE__*/function (_React$Component2) {
 
       var values = this._getValues();
 
-      console.log(values);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement((react__WEBPACK_IMPORTED_MODULE_7___default().Fragment), null, values.map(function (itemValue, itemIndex) {
         return _this._renderInputItem(itemValue, itemIndex);
       }));

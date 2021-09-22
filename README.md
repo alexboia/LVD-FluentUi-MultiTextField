@@ -171,6 +171,10 @@ A plain javascript object with the following properties:
 ## Changelog
 <a name="c-changelog"></a>
 
+### Version 0.0.2
+
+- Removed item value console logging.
+
 ### Version 0.0.1
 
 - First tracked version.

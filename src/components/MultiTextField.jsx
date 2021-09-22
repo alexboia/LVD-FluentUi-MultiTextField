@@ -209,7 +209,6 @@ class MultiTextField extends React.Component {
 
 	_renderInputList() {
 		const values = this._getValues();
-		console.log(values);
 		return (
 			<React.Fragment>
 				{values.map((itemValue, itemIndex) => this._renderInputItem(itemValue, itemIndex))}

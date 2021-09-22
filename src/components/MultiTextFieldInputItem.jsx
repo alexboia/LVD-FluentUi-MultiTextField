@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { TextField } from '@fluentui/react';
 import { ActionButton } from '@fluentui/react';
 
-import MultiTextFieldDefaults from './MultiTextFieldDefaults';
+import MultiTextFieldDefaults from './MultiTextFieldDefaults.js';
 
 export default class MultiTextFieldInputItem extends React.Component {
 	constructor(props) {
